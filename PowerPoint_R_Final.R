@@ -9,12 +9,12 @@ library(rvest)
 
 # download and read in the data files
 download.file("https://raw.githubusercontent.com/asifsalam/PowerPoint_from_R/master/eastwood_films.tsv",
-              destfile = "films.tsv")
+              destfile = "eastwood_films.tsv")
 download.file("https://raw.githubusercontent.com/asifsalam/PowerPoint_from_R/master/eastwood_box_office.tsv", 
               destfile = "box_office.tsv")
 
-films <- read.table("eastwood_films.csv",header=TRUE, stringsAsFactors=FALSE)
-box_office <- read.table("box_office.csv",header=TRUE, stringsAsFactors=FALSE)
+films <- read.table("eastwood_films.tsv",header=TRUE, stringsAsFactors=FALSE)
+box_office <- read.table("box_office.tsv",header=TRUE, stringsAsFactors=FALSE)
 source("mso.txt")
 actor_name <- "Clint Eastwood"
 
